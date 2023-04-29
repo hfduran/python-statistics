@@ -56,3 +56,13 @@ ax.hist(x, bin_edges, cumulative=False)
 ax.set_xlabel('x')
 ax.set_ylabel('Frequency')
 plt.show()
+
+z = pd.Series(x)
+print(z.describe())
+
+fig = plt.subplot()
+fig.boxplot((x), vert=False, showmeans=True, meanline=True,
+           labels=('x'), patch_artist=True,
+           medianprops={'linewidth': 2, 'color': 'purple'},
+           meanprops={'linewidth': 2, 'color': 'red'})
+plt.show()
